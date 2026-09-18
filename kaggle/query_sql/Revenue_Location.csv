@@ -1,0 +1,21 @@
+city,region,"postal code",country,total_revenue
+Lafayette,Central,47905,"United States",18336.74
+"New York City",East,10035,"United States",15264.52
+"San Antonio",Central,78207,"United States",10539.9
+Arlington,South,22204,"United States",8861.49
+"New York City",East,10024,"United States",7350
+"San Francisco",West,94110,"United States",6917.77
+Atlanta,South,30318,"United States",6412.77
+"New York City",East,10009,"United States",6389.07
+"New York City",East,10009,"United States",6210.02
+Yonkers,East,10701,"United States",6125.82
+Philadelphia,East,19134,"United States",6044.78
+"New York City",East,10024,"United States",5909.33
+"New York City",East,10035,"United States",5847.76
+Burlington,East,5408,"United States",5699.65
+Providence,East,2908,"United States",5627.99
+Providence,East,2908,"United States",5562.37
+"New York City",East,10035,"United States",5509.14
+Seattle,West,98103,"United States",5379.41
+Sacramento,West,95823,"United States",5325.88
+"San Francisco",West,94110,"United States",5282.65
