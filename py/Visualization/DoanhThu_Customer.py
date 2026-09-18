@@ -1,9 +1,9 @@
 import matplotlib.pyplot as plt
 import pandas as pd
-df = pd.read_csv(r"D:\Retail_Sales\kaggle\query_sql\DoanhThu_customer.csv")
+df = pd.read_csv(r"D:\Retail_Sales\kaggle\query_sql\RevenueRank_Customer.csv")
 
 plt.figure(figsize=(10, 6))
-plt.barh(df["customer name"], df["tong"], height = 0.6, color='steelblue')
+plt.barh(df["customer name"], df["total_revenue"], height = 0.6, color='steelblue')
 
 plt.xlabel("Doanh Thu")
 plt.ylabel("Khách hàng")

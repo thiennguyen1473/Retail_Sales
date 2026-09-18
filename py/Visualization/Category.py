@@ -1,7 +1,7 @@
 import matplotlib.pyplot as plt
 import pandas as pd
 
-df = pd.read_csv(r"D:\Retail_Sales\kaggle\query_sql\Doanhthu_Category.csv")
+df = pd.read_csv(r"D:\Retail_Sales\kaggle\query_sql\Revenue_Category.csv")
 
 x = range(len(df["category"]))
 plt.figure(figsize = (10, 6))
