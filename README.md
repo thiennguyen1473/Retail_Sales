@@ -138,3 +138,38 @@ Các thẻ KPI hiển thị các số liệu chính, cùng với xu hướng doa
 | tổng order | 9.994 lượt giao dịch| 
 | phần trăm lợi nhuận | 12% |
 
+
+
+![DashBoard](https://github.com/thiennguyen1473/Retail_Sales/blob/d0730ac29130729ae3b5831528f99c8370578198/DashBoard.PNG)
+
+**Phân tích kinh doanh và xu hướng**
+
+Doanh thu có xu hướng tăng trong giai đoạn 2014–2017. giảm nhẹ trong năm 2015, sau đó tăng dần đến và đạt mức cao nhất năm 2017. Điều này cho thấy doanh thu có sự cải thiện về tổng thể qua các năm.
+<img width="732" height="307" alt="image" src="https://github.com/user-attachments/assets/777b4d26-893a-4b62-bc12-a8ca72105671" />
+
+
+**8 Thành phố có số doanh thu mua hàng lớn nhất**
+
+<img width="339" height="192" alt="image" src="https://github.com/user-attachments/assets/297a6d01-f877-4d75-b3dd-a7e1f6df91e3" />
+
+**Mối quan hệ giữa doanh thu và lợi nhuận**
+Technology dẫn đầu về cả doanh thu và lợi nhuận. Office Supplies và Furniture có doanh thu tương đương nhưng chênh lệch đáng kể về lợi nhuận, cho thấy hiệu quả sinh lời khác nhau giữa hai nhóm.
+
+<img width="446" height="270" alt="image" src="https://github.com/user-attachments/assets/58248e84-cd49-4fc9-b04f-04506a603929" />
+
+**Tỉ lệ doanh thu mua hàng theo phân khúc khách hàng**
+
+Consumer là nhóm khách hàng đóng góp doanh thu lớn nhất, chiếm hơn một nửa tổng doanh thu (50,56%), trong khi Corporate và Home Office lần lượt chiếm 30,74% và 18,70%.
+<img width="337" height="254" alt="image" src="https://github.com/user-attachments/assets/576e126e-ecdd-44ca-a522-57b6e6f12ffb" />
+
+
+**a**
+
+ New York City dẫn đầu với doanh thu trên 50K, cao hơn đáng kể so với Lafayette và các thành phố còn lại. Các thành phố trong nhóm Top 10 phía sau có doanh thu tương đối gần nhau hơn, chủ yếu nằm trong khoảng 5K–20K.
+ <img width="517" height="237" alt="image" src="https://github.com/user-attachments/assets/35709397-0047-4593-bd9c-d115524102c3" />
+
+
+**customer id**
+
+SM-20320 là khách hàng có doanh thu cao nhất trong Top 10, đạt khoảng 25K và vượt khá xa phần lớn các khách hàng còn lại.
+<img width="591" height="260" alt="image" src="https://github.com/user-attachments/assets/7625b82a-f863-4f10-a7e2-6e4fdff631af" />
