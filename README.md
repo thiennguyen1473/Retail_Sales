@@ -12,9 +12,12 @@ Những **khách hàng** nào tạo ra **doanh thu** nhiều nhất?
 
 Những **sản phẩm** nào gây ra **thua lỗ hoặc rất kén người mua**?
 
-## Sơ đồ ERD
+## Data flow
+## Diagram
+![Diagram](https://github.com/thiennguyen1473/Retail_Sales/blob/442d861ed361f04f40bf34c3d7ae7a15d6f5187c/Diagram.png)
 
 ## Kiến trúc kỹ thuật
+
 
 ## Công nghệ sử dụng
 
@@ -37,6 +40,7 @@ Nguồn: https://www.kaggle.com/datasets/nhatthuaunguyen/supply-chain-and-sales
 **Các bảng**: Calendar, Category, SubCate, Product, Customer, Customer Segment, FactRetaild, Retail Sales People, Location, ShipMode.
 
 Trong đó FactRetaild là bảng trung tâm, chứa các thông tin như doanh số, lợi nhuận, chi phí, số lượng, ngày đặt hàng, ngày giao hàng và các mã liên kết đến các bảng khác.
+
 ### 1.Kiểm tra dữ liệu
 - Số dòng, số cột, kiểu dữ liệu
 - Missing value
@@ -45,11 +49,13 @@ Trong đó FactRetaild là bảng trung tâm, chứa các thông tin như doanh 
 - Foreign Key
 - Phân bố dữ liệu
 - Các giá trị bất thường
+
 ### 2.Làm sạch dữ liệu bằng Python với thư viện pandas
 - Chuẩn hóa kiểu dữ liệu
 - Xóa các dòng bất thường, thiếu dữ liệu
 - Xóa các dòng trùng lặp
 - Chuẩn hóa tên cột
+
 ### 3.Phân tích dữ liệu từ SQL
 Đã tải dữ liệu đã được làm sạch vào MySQL Workbench và viết các truy vấn để trả lời các câu hỏi kinh doanh cụ thể. Dưới đây là một số ví dụ:
 
@@ -100,3 +106,15 @@ join category c on s.`category id` = c.`category id`
 group by c.`category`
 order by total_profit desc;
 ```
+### 4 POWER BI DASHBOARD
+**Tổng quan**
+Các thẻ KPI hiển thị các số liệu chính, cùng với xu hướng doanh thu hàng tháng, khách hàng hàng đầu,  doanh thu sản phẩm theo category,phân tích theo địa điểm — tất cả trên một trang tương tác duy nhất.
+
+**Các chỉ số chính**
+|số liệu| giá trị|
+|---|---|
+| Tổng doanh thu | 2.300.000 usd |
+|tổng khách hàng| 793 |
+| tổng order | 9.994 | |
+| phần trăm lợi nhuận | 12 |
+
