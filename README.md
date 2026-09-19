@@ -12,11 +12,30 @@ Những **khách hàng** nào tạo ra **doanh thu** nhiều nhất?
 
 Những **sản phẩm** nào gây ra **thua lỗ hoặc rất kén người mua**?
 
-## Data flow
 ## Diagram
 ![Diagram](https://github.com/thiennguyen1473/Retail_Sales/blob/442d861ed361f04f40bf34c3d7ae7a15d6f5187c/Diagram.png)
 
 ## Kiến trúc kỹ thuật
+## Cấu trúc Project
+
+```text
+Retail_Sales/
+│
+├── kaggle/
+│   ├── dataset.csv
+│   ├── cleaned/              # Các file CSV sau khi làm sạch
+│   └── sql_query/            # Kết quả các truy vấn SQL dưới dạng CSV
+│
+├── py/
+│   ├── cleaning.py           # Làm sạch dữ liệu bằng Python
+│   └── visualization/        # Các file Python dùng để vẽ biểu đồ
+│
+├── sql/
+│   └── create_table.sql      # Tạo database, bảng và các quan hệ
+│
+├── dashboard.png            
+└── diagram.png
+```               
 
 
 ## Công nghệ sử dụng
@@ -41,6 +60,7 @@ Nguồn: https://www.kaggle.com/datasets/nhatthuaunguyen/supply-chain-and-sales
 
 Trong đó FactRetaild là bảng trung tâm, chứa các thông tin như doanh số, lợi nhuận, chi phí, số lượng, ngày đặt hàng, ngày giao hàng và các mã liên kết đến các bảng khác.
 
+## Project Workflow
 ### 1.Kiểm tra dữ liệu
 - Số dòng, số cột, kiểu dữ liệu
 - Missing value
@@ -114,7 +134,7 @@ Các thẻ KPI hiển thị các số liệu chính, cùng với xu hướng doa
 |số liệu| giá trị|
 |---|---|
 | Tổng doanh thu | 2.300.000 usd |
-|tổng khách hàng| 793 |
-| tổng order | 9.994 | |
-| phần trăm lợi nhuận | 12 |
+|tổng khách hàng| 793 người |
+| tổng order | 9.994 lượt giao dịch| 
+| phần trăm lợi nhuận | 12% |
 
