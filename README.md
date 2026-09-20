@@ -144,11 +144,13 @@ Các thẻ KPI hiển thị các số liệu chính, cùng với xu hướng doa
 
 **Phân tích kinh doanh và xu hướng**
 
+Doanh thu **tăng cao rõ rệt** vào các tháng cuối năm, đạt mức **cao nhất ở tháng 11** và hạ nhiệt dần đến tháng 12.
+
 Doanh thu có xu hướng tăng trong giai đoạn 2014–2017. giảm nhẹ trong năm 2015, sau đó tăng dần đến và đạt mức cao nhất năm 2017. Điều này cho thấy doanh thu có sự cải thiện về tổng thể qua các năm.
 <img width="732" height="307" alt="image" src="https://github.com/user-attachments/assets/777b4d26-893a-4b62-bc12-a8ca72105671" />
 
 
-**8 Thành phố có số doanh thu mua hàng lớn nhất**
+**10 Thành phố có số doanh thu mua hàng lớn nhất**
 
 <img width="339" height="192" alt="image" src="https://github.com/user-attachments/assets/297a6d01-f877-4d75-b3dd-a7e1f6df91e3" />
 
@@ -173,3 +175,17 @@ Consumer là nhóm khách hàng đóng góp doanh thu lớn nhất, chiếm hơn
 
 SM-20320 là khách hàng có doanh thu cao nhất trong Top 10, đạt khoảng 25K và vượt khá xa phần lớn các khách hàng còn lại.
 <img width="591" height="260" alt="image" src="https://github.com/user-attachments/assets/7625b82a-f863-4f10-a7e2-6e4fdff631af" />
+
+
+
+### nhận xét
+- **20% số sản phẩm hàng đầu đóng góp 78% tổng doanh thu**, một quy luật điển hình của quy luật **patero**
+
+- có đến **99,78%** người dùng quyết định **mua hàng lần 2**, doanh nghiệp cần **duy trì và giữ chân** nhóm khách hàng này, đồng thời ưu tiên **mở rộng tệp khách hàng mới**
+
+- Doanh thu **tập trung nhiều hơn** ở các khu vực **West và East**, lần lượt chiếm **31,58% và 29,55%** tổng doanh thu. Trong khi đó, **South có tỷ trọng thấp nhất với 17,05%**. Cho thấy có sự **phân bố** doanh thu khá cao theo **khu vực địa lý**
+
+### đề xuất
+- Tập trung nguồn lực vào nhóm sản phẩm tạo doanh thu cao, đặc biệt là 20% sản phẩm đóng góp phần lớn doanh thu; đồng thời theo dõi và tối ưu các sản phẩm có doanh thu thấp.
+- Duy trì và chăm sóc khách hàng hiện tại thông qua chương trình khách hàng thân thiết, ưu đãi và bán thêm sản phẩm; đồng thời mở rộng tệp khách hàng mới để tăng quy mô thị trường.
+- Tiếp tục khai thác thị trường West và East, đồng thời phân tích nguyên nhân doanh thu tại South thấp hơn để xác định cơ hội cải thiện và mở rộng thị trường.
