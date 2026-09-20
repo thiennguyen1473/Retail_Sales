@@ -1,9 +1,9 @@
 # Phân tích doanh số Chuỗi cung ứng và bán hàng
-Dự án phân tích dữ liệu toàn diện sử dụng Python, MySQL Workbench trực quan hóa dữ liệu để trích xuất những thông tin kinh doanh hữu ích từ chuỗi cung ứng và bán hàng, 
-phản ánh vòng đời của đơn hàng trong hoạt động thương mại điện tử và bán lẻ đa danh mục.
+Dự án phân tích dữ liệu toàn diện sử dụng **Python, MySQL Workbench** trực quan hóa dữ liệu để **trích xuất những thông tin kinh doanh hữu ích** từ **chuỗi cung ứng và bán hàng**, 
+phản ánh vòng đời của đơn hàng trong hoạt động **thương mại điện tử và bán lẻ đa danh mục.**
 
 ## Tổng quan dự án:
-Dự án này phân tích dữ liệu bán lẻ  có trụ sở tại Hoa Kỳ để trả lời các câu hỏi kinh doanh quan trọng:
+Dự án này phân tích dữ liệu bán lẻ  có trụ sở tại **Hoa Kỳ** để trả lời các **câu hỏi kinh** doanh quan trọng:
 
 Những loại sản phẩm nào tạo ra **doanh thu và lợi nhuận cao nhất?**
 
@@ -44,18 +44,18 @@ Retail_Sales/
 | Tools | Mục đích |
 |---|---|
 | Python 3.14.0 | Kiểm tra và làm sạch dữ liệu |
-| MySQL Workbench | Thao tác và phân tích dữ liệu |
+| Visual Studio Code | Môi trường tương tác với python | 
 | Pandas | Thao tác với DataFrame |
+| MySQL Workbench 8.0 | Thao tác và phân tích dữ liệu |
 | Matplotlib | Trực quan hóa dữ liệu |
-| Visual Studio Code	| Môi trường tương tác với python | 
 | Power BI | Trực quan hóa dữ liệu với dashboard |
 
 ## Tập dữ liệu:
 Nguồn: https://www.kaggle.com/datasets/nhatthuaunguyen/supply-chain-and-sales
 
-**Thời gian**: bộ dữ liệu bắt đầu từ 1/2014 cho đến 12/2017
+**Thời gian**: bộ dữ liệu bắt đầu từ **1/2014 cho đến 12/2017**
 
-**Số lượng giao dịch**: 9.994 lượt giao dịch
+**Số lượng giao dịch**: **9.994** lượt giao dịch
 
 **Các bảng**: Calendar, Category, SubCate, Product, Customer, Customer Segment, FactRetaild, Retail Sales People, Location, ShipMode.
 
@@ -93,7 +93,7 @@ limit 10;
 **Doanh thu thay đổi như thế nào theo địa điểm?**
 ```sql
 -- Top 10 địa điểm có doanh thu cao nhất
-	select l.`postal code`, l.`country`, sum(f.sales) as tong from factretaild f 
+select l.`postal code`, l.`country`, sum(f.sales) as tong from factretaild f 
 join location l on f.`postal Code` = l.`postal code` 
 group by l.`country`, l.`postal Code`
 order by tong desc
@@ -103,16 +103,16 @@ limit 10;
 **Doanh thu thay đổi như thế nào theo năm, liệu có sự tăng dần ổn định hay bức phá tại năm nào đó?**
 ```sql
 -- Tổng doanh thu theo năm
-select c.year, sum(f.sales) as tong from factretaild f join calendar c
-on f.`order date` = c.`date`
+select c.year, sum(f.sales) as tong from factretaild f
+join calendar c on f.`order date` = c.`date`
 group by c.year;
 ```
 
 **Doanh thu theo tháng trong từng năm riêng lẻ thay đổi như thế nào?**
 ```sql
 -- Tổng doanh thu theo tháng
-select c.month,c .year, sum(f.sales) as tong_month from factretaild f join calendar c
-on f.`order date` = c.`date`
+select c.month,c .year, sum(f.sales) as tong_month from factretaild f
+join calendar c on f.`order date` = c.`date`
 group by c.month,c.year
 order by c.year, c.month;
 ```
@@ -120,25 +120,57 @@ order by c.year, c.month;
 **Có danh mục Category nào tạo ra doanh thu và lợi nhuận vượt trội so với còn lại?**
 ```sql
 -- Doanh thu và lợi nhuận theo từng danh mục Category
-select c.`category`, sum(f.sales) as total_sales,(sum(f.sales) - sum(f.cost)) as total_profit from factretaild f join product p
+select c.`category`, sum(f.sales) as total_sales,
+(sum(f.sales) - sum(f.cost)) as total_profit
+from factretaild f join product p
 on f.`product id` = p.`product id`
 join subcate s on p.`sub-Cate id` = s.`sub-Cate id`
 join category c on s.`category id` = c.`category id`
 group by c.`category`
 order by total_profit desc;
 ```
+
+**Top 5 Sub-Category trong mỗi danh mục Category?**
+
+```sql
+-- Top 5 Sub-Category ranking by Category
+with cte as(select s.`sub-category`, c.`customer name`, c.`customer id`, sum(f.sales) as total_revenue, 
+rank() over(partition by s.`sub-Category` order by sum(f.sales) desc) as sales_rank
+from factretaild f 
+join customer c on f.`customer id` = c.`customer id`
+join product p on p.`product id` = f.`product id` 
+join subcate s on s.`sub-cate id` = p.`sub-cate id` 
+group by s.`sub-category`,c.`customer name`, c.`customer id`)
+select `customer name`, `customer id`, `sub-category`, round(total_revenue, 2), sales_rank
+from cte where sales_rank <= 5;
+```
+
+**Phân loại 793 khách hàng thành 3 nhóm dựa trên tổng doanh thu.**
+```sql
+--- 3 nhóm khách hàng theo doanh thu
+select c.`customer id` , c.`customer name`, sum(f.sales) as total_sales, 
+case
+when sum(f.sales) >= 3100 then 'hight value'
+when sum(f.sales) >= 1455 then 'medium value'
+else 'low value'
+    end as customer_segment 
+from factretaild f join customer c
+on f.`customer id` = c.`customer id` 
+group by c.`customer id`, c.`customer name`
+order by total_sales desc;
+```
+
 ### 4 POWER BI DASHBOARD
 **Tổng quan**
 Các thẻ KPI hiển thị các số liệu chính, cùng với xu hướng doanh thu hàng tháng, khách hàng hàng đầu,  doanh thu sản phẩm theo category,phân tích theo địa điểm — tất cả trên một trang tương tác duy nhất.
 
 **Các chỉ số chính**
-|số liệu| giá trị|
-|---|---|
-| Tổng doanh thu | 2.300.000 usd |
-|tổng khách hàng| 793 người |
-| tổng order | 9.994 lượt giao dịch| 
-| phần trăm lợi nhuận | 12% |
-
+|số liệu| giá trị| đơn vị|
+|---|---|---|
+| Tổng doanh thu | 2.300.000 | usd |
+|tổng khách hàng| 793 | người |
+| tổng order | 9.994 | lượt giao dịch|
+| phần trăm lợi nhuận | 12 | phần trăm |
 
 
 ![DashBoard](https://github.com/thiennguyen1473/Retail_Sales/blob/092bdeb1e149b0b195f6b08ce7f1c4ac39050e0f/DashBoard.PNG)
@@ -149,17 +181,17 @@ Các thẻ KPI hiển thị các số liệu chính, cùng với xu hướng doa
 
 <img width="682" height="262" alt="image" src="https://github.com/user-attachments/assets/ab6baba4-05da-4799-b429-884ae7291ee2" />
 
-- Doanh thu có xu hướng tăng trong giai đoạn 2014–2017. giảm nhẹ trong năm 2015, sau đó tăng dần đến và đạt mức cao nhất năm 2017. Điều này cho thấy doanh thu có sự cải thiện về tổng thể qua các năm.
+- Doanh thu có xu hướng tăng trong giai đoạn 2014–2017. **giảm nhẹ** trong năm 2015, sau đó tăng dần đến và **đạt mức cao nhất năm 2017**. Điều này cho thấy doanh thu có sự cải thiện về tổng thể qua các năm.
 
 <img width="732" height="307" alt="image" src="https://github.com/user-attachments/assets/777b4d26-893a-4b62-bc12-a8ca72105671" />
 
 
 **10 Thành phố có số doanh thu mua hàng lớn nhất**
-- New York City dẫn đầu với doanh thu trên 50K, cao hơn đáng kể so với Lafayette và các thành phố còn lại. Các thành phố trong nhóm Top 10 phía sau có doanh thu tương đối gần nhau hơn, chủ yếu nằm trong khoảng 5K–20K.
+- New York City dẫn đầu với doanh thu trên 250K, cao hơn đáng kể so với Lafayette và các thành phố còn lại. Các thành phố trong nhóm Top 10 phía sau có doanh thu tương đối gần nhau hơn, chủ yếu nằm trong khoảng 30K – 100K.
 <img width="494" height="262" alt="image" src="https://github.com/user-attachments/assets/399d897f-eda0-49e5-86f0-5c4ab593ffce" />
 
 **Mối quan hệ giữa doanh thu và lợi nhuận**
-- Technology dẫn đầu về cả doanh thu và lợi nhuận. Office Supplies và Furniture có doanh thu tương đương nhưng chênh lệch đáng kể về lợi nhuận, cho thấy hiệu quả sinh lời khác nhau giữa hai nhóm.
+- **Technology dẫn đầu về cả doanh thu và lợi nhuận.** Office Supplies và Furniture có doanh thu tương đương nhưng chênh lệch đáng kể về lợi nhuận, cho thấy **hiệu quả sinh lời** khác nhau giữa hai nhóm.
 
 <img width="446" height="270" alt="image" src="https://github.com/user-attachments/assets/58248e84-cd49-4fc9-b04f-04506a603929" />
 
