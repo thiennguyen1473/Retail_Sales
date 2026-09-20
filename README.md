@@ -15,7 +15,6 @@ Những **sản phẩm** nào gây ra **thua lỗ hoặc rất kén người mua
 ## Diagram
 ![Diagram](https://github.com/thiennguyen1473/Retail_Sales/blob/442d861ed361f04f40bf34c3d7ae7a15d6f5187c/Diagram.png)
 
-## Kiến trúc kỹ thuật
 ## Cấu trúc Project
 
 ```text
