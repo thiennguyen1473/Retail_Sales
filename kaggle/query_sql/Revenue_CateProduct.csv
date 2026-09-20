@@ -1,10 +1,10 @@
-category,"category id","product id","product name",total_sales,sales_rank
-Furniture,1,FUR-CH-10002024,"HON 5400 Series Task Chairs for Big and Tall",21870.576,1
+category,category id,product id,product name,total_sales,sales_rank
+Furniture,1,FUR-CH-10002024,HON 5400 Series Task Chairs for Big and Tall,21870.576,1
 Furniture,1,FUR-BO-10004834,"Riverside Palais Royal Lawyers Bookcase, Royale Cherry Finish",15610.9656,2
-Furniture,1,FUR-TA-10003473,"Bretford Rectangular Conference Table Tops",12995.291500000001,3
-"Office Supplies",2,OFF-BI-10003527,"Fellowes PB500 Electric Punch Plastic Comb Binding Machine with Manual Bind",27453.384,1
-"Office Supplies",2,OFF-BI-10001359,"GBC DocuBind TL300 Electric Binding System",19823.479000000003,2
-"Office Supplies",2,OFF-BI-10000545,"GBC Ibimaster 500 Manual ProClick Binding System",19024.5,3
-Technology,3,TEC-CO-10004722,"Canon imageCLASS 2200 Advanced Copier",61599.824,1
-Technology,3,TEC-MA-10002412,"Cisco TelePresence System EX90 Videoconferencing Unit",22638.48,2
-Technology,3,TEC-CO-10001449,"Hewlett Packard LaserJet 3310 Copier",18839.686,3
+Furniture,1,FUR-TA-10003473,Bretford Rectangular Conference Table Tops,12995.2915,3
+Office Supplies,2,OFF-BI-10003527,Fellowes PB500 Electric Punch Plastic Comb Binding Machine with Manual Bind,27453.384,1
+Office Supplies,2,OFF-BI-10001359,GBC DocuBind TL300 Electric Binding System,19823.479,2
+Office Supplies,2,OFF-BI-10000545,GBC Ibimaster 500 Manual ProClick Binding System,19024.5,3
+Technology,3,TEC-CO-10004722,Canon imageCLASS 2200 Advanced Copier,61599.824,1
+Technology,3,TEC-MA-10002412,Cisco TelePresence System EX90 Videoconferencing Unit,22638.48,2
+Technology,3,TEC-CO-10001449,Hewlett Packard LaserJet 3310 Copier,18839.686,3
