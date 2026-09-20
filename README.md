@@ -62,7 +62,7 @@ Nguồn: https://www.kaggle.com/datasets/nhatthuaunguyen/supply-chain-and-sales
 Trong đó FactRetaild là bảng trung tâm, chứa các thông tin như doanh số, lợi nhuận, chi phí, số lượng, ngày đặt hàng, ngày giao hàng và các mã liên kết đến các bảng khác.
 
 ## Project Workflow
-### 1.Kiểm tra dữ liệu
+### 1. Kiểm tra dữ liệu
 - Số dòng, số cột, kiểu dữ liệu
 - Missing value
 - Duplicate
@@ -71,13 +71,13 @@ Trong đó FactRetaild là bảng trung tâm, chứa các thông tin như doanh 
 - Phân bố dữ liệu
 - Các giá trị bất thường
 
-### 2.Làm sạch dữ liệu bằng Python với thư viện pandas
+### 2. Làm sạch dữ liệu bằng Python với thư viện pandas
 - Chuẩn hóa kiểu dữ liệu
 - Xóa các dòng bất thường, thiếu dữ liệu
 - Xóa các dòng trùng lặp
 - Chuẩn hóa tên cột
 
-### 3.Phân tích dữ liệu từ SQL
+### 3. Phân tích dữ liệu từ SQL
 Đã tải dữ liệu đã được làm sạch vào MySQL Workbench và viết các truy vấn để trả lời các câu hỏi kinh doanh cụ thể. Dưới đây là một số ví dụ:
 
 **Doanh thu theo Customer**
@@ -160,7 +160,7 @@ group by c.`customer id`, c.`customer name`
 order by total_sales desc;
 ```
 
-### 4 POWER BI DASHBOARD
+### 4. POWER BI DASHBOARD
 **Tổng quan**
 Các thẻ KPI hiển thị các số liệu chính, cùng với xu hướng doanh thu hàng tháng, khách hàng hàng đầu,  doanh thu sản phẩm theo category,phân tích theo địa điểm — tất cả trên một trang tương tác duy nhất.
 
