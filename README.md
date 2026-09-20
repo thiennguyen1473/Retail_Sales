@@ -46,7 +46,7 @@ Retail_Sales/
 | Pandas | Thao tác với DataFrame |
 | Matplotlib | Trực quan hóa dữ liệu |
 | Visual Studio Code	| Môi trường tương tác với python | 
-| Excel | Thay đổi định dạng ngày |
+| Power BI | Trực quan hóa dữ liệu với dashboard |
 
 ## Tập dữ liệu:
 Nguồn: https://www.kaggle.com/datasets/nhatthuaunguyen/supply-chain-and-sales
