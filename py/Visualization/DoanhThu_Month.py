@@ -1,13 +1,13 @@
 import matplotlib.pyplot as plt
 import pandas as pd
 
-df = pd.read_csv(r"D:\Retail_Sales\kaggle\query_sql\DoanhThu_Month.csv")
+df = pd.read_csv(r"D:\Retail_Sales\kaggle\query_sql\Revenue_Month.csv")
 plt.figure(figsize=(14, 6))
 for x in df["year"].unique():
     df_year = df[df["year"] == x]
     plt.plot(
         df_year["month"],
-        df_year["tong_month"],
+        df_year["total_revenue"],
         marker="o",
         label = str(x))
 
