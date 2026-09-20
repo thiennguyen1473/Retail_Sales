@@ -3,8 +3,9 @@ Dự án phân tích dữ liệu toàn diện sử dụng Python, MySQL Workbenc
 phản ánh vòng đời của đơn hàng trong hoạt động thương mại điện tử và bán lẻ đa danh mục.
 
 ## Tổng quan dự án:
-Dự án này phân tích dữ liệu trong có trụ sở tại Hoa Kỳ để trả lời các câu hỏi kinh doanh quan trọng:
-Những loại sản phẩm nào tạo ra doanh thu và lợi nhuận cao nhất?
+Dự án này phân tích dữ liệu bán lẻ  có trụ sở tại Hoa Kỳ để trả lời các câu hỏi kinh doanh quan trọng:
+
+Những loại sản phẩm nào tạo ra **doanh thu và lợi nhuận cao nhất?**
 
 Những **khách hàng** nào tạo ra **doanh thu** nhiều nhất?
 
@@ -34,6 +35,7 @@ Retail_Sales/
 │
 ├── dashboard.png            
 └── diagram.png
+└── README.MD
 ```               
 
 
@@ -141,44 +143,54 @@ Các thẻ KPI hiển thị các số liệu chính, cùng với xu hướng doa
 
 ![DashBoard](https://github.com/thiennguyen1473/Retail_Sales/blob/092bdeb1e149b0b195f6b08ce7f1c4ac39050e0f/DashBoard.PNG)
 
-**Phân tích kinh doanh và xu hướng**
+## Phân tích kinh doanh và xu hướng
 
-Doanh thu **tăng cao rõ rệt** vào các tháng cuối năm, đạt mức **cao nhất ở tháng 11** và hạ nhiệt dần đến tháng 12.
+- Doanh thu **tăng cao rõ rệt** vào các tháng cuối năm, đạt mức **cao nhất ở tháng 11** và hạ nhiệt dần đến tháng 12.
 
-Doanh thu có xu hướng tăng trong giai đoạn 2014–2017. giảm nhẹ trong năm 2015, sau đó tăng dần đến và đạt mức cao nhất năm 2017. Điều này cho thấy doanh thu có sự cải thiện về tổng thể qua các năm.
+<img width="682" height="262" alt="image" src="https://github.com/user-attachments/assets/ab6baba4-05da-4799-b429-884ae7291ee2" />
+
+- Doanh thu có xu hướng tăng trong giai đoạn 2014–2017. giảm nhẹ trong năm 2015, sau đó tăng dần đến và đạt mức cao nhất năm 2017. Điều này cho thấy doanh thu có sự cải thiện về tổng thể qua các năm.
+
 <img width="732" height="307" alt="image" src="https://github.com/user-attachments/assets/777b4d26-893a-4b62-bc12-a8ca72105671" />
 
 
 **10 Thành phố có số doanh thu mua hàng lớn nhất**
- New York City dẫn đầu với doanh thu trên 50K, cao hơn đáng kể so với Lafayette và các thành phố còn lại. Các thành phố trong nhóm Top 10 phía sau có doanh thu tương đối gần nhau hơn, chủ yếu nằm trong khoảng 5K–20K.
+- New York City dẫn đầu với doanh thu trên 50K, cao hơn đáng kể so với Lafayette và các thành phố còn lại. Các thành phố trong nhóm Top 10 phía sau có doanh thu tương đối gần nhau hơn, chủ yếu nằm trong khoảng 5K–20K.
 <img width="494" height="262" alt="image" src="https://github.com/user-attachments/assets/399d897f-eda0-49e5-86f0-5c4ab593ffce" />
 
 **Mối quan hệ giữa doanh thu và lợi nhuận**
-Technology dẫn đầu về cả doanh thu và lợi nhuận. Office Supplies và Furniture có doanh thu tương đương nhưng chênh lệch đáng kể về lợi nhuận, cho thấy hiệu quả sinh lời khác nhau giữa hai nhóm.
+- Technology dẫn đầu về cả doanh thu và lợi nhuận. Office Supplies và Furniture có doanh thu tương đương nhưng chênh lệch đáng kể về lợi nhuận, cho thấy hiệu quả sinh lời khác nhau giữa hai nhóm.
 
 <img width="446" height="270" alt="image" src="https://github.com/user-attachments/assets/58248e84-cd49-4fc9-b04f-04506a603929" />
 
 **Tỉ lệ doanh thu mua hàng theo phân khúc khách hàng**
 
-Consumer là nhóm khách hàng đóng góp doanh thu lớn nhất, chiếm hơn một nửa tổng doanh thu (50,56%), trong khi Corporate và Home Office lần lượt chiếm 30,74% và 18,70%.
+- Consumer là nhóm khách hàng đóng góp doanh thu lớn nhất, chiếm hơn một nửa tổng doanh thu (50,56%), trong khi Corporate và Home Office lần lượt chiếm 30,74% và 18,70%.
+
 <img width="337" height="254" alt="image" src="https://github.com/user-attachments/assets/576e126e-ecdd-44ca-a522-57b6e6f12ffb" />
 
 
-**customer id**
+**Top 10 khách hàng tạo ra doanh thu cao nhất**
 
 SM-20320 là khách hàng có doanh thu cao nhất trong Top 10, đạt khoảng 25K và vượt khá xa phần lớn các khách hàng còn lại.
+
 <img width="496" height="267" alt="image" src="https://github.com/user-attachments/assets/e6abb1ff-eafd-48ea-b5ef-fe690bc03a60" />
 
 
 
 ## Một số phát hiện chính
-- **20% số sản phẩm hàng đầu đóng góp 78% tổng doanh thu**, một quy luật điển hình của quy luật **patero**
+- **20% số sản phẩm hàng đầu đóng góp 78% tổng doanh thu**, một quy luật điển hình của quy luật **pareto**
 
-- có đến **99,78%** người dùng quyết định **mua hàng lần 2**, doanh nghiệp cần **duy trì và giữ chân** nhóm khách hàng này, đồng thời ưu tiên **mở rộng tệp khách hàng mới**
+- có đến **99,49%** người dùng quyết định **mua hàng lần 2**, doanh nghiệp cần **duy trì và giữ chân** nhóm khách hàng này, đồng thời ưu tiên **mở rộng tệp khách hàng mới**
 
 - Doanh thu **tập trung nhiều hơn** ở các khu vực **West và East**, lần lượt chiếm **31,58% và 29,55%** tổng doanh thu. Trong khi đó, **South có tỷ trọng thấp nhất với 17,05%**. Cho thấy có sự **phân bố** doanh thu khá cao theo **khu vực địa lý**
+- nhóm sản phẩm **Furniture có doanh thu tương đối cao nhưng lợi nhuận thấp nhất**, cho thấy biên lợi nhuận của Furniture thấp hơn đáng kể so với Technology và Office Supplies.
 
-## đề xuất kinh doanh
-- Tập trung nguồn lực vào nhóm sản phẩm tạo doanh thu cao, đặc biệt là **20% sản phẩm đóng góp phần lớn doanh thu**; đồng thời **theo dõi và tối ưu** các sản phẩm có doanh thu thấp.
+## Đề xuất kinh doanh
+- **Tập trung nguồn lực** vào nhóm sản phẩm tạo doanh thu cao, đặc biệt là **20% sản phẩm đóng góp phần lớn doanh thu**; đồng thời **theo dõi và tối ưu** các sản phẩm có doanh thu thấp.
+
+- Đối với **Furniture**, cần **rà soát chi phí và chính sách giá/chiết khấu** để cải thiện biên lợi nhuận. Technology nên tiếp tục được duy trì và phát triển các sản phẩm có hiệu quả cao, trong khi Office Supplies cần tập trung vào các sản phẩm có khả năng sinh lợi tốt.
+
 - Duy trì và chăm sóc khách hàng hiện tại thông qua chương trình **khách hàng thân thiết, ưu đãi và bán thêm sản phẩm; đồng thời mở rộng tệp khách hàng mới để tăng quy mô thị trường.**
+
 - **Tiếp tục khai thác thị trường West và East**, đồng thời phân tích **nguyên nhân** doanh thu tại South thấp hơn để xác định cơ hội cải thiện và mở rộng thị trường.
